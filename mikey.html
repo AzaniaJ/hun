@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jumbo Car Motors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            padding: 10px 0;
+            background-color: orange;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: #333 !important;
+        }
+
+        header {
+            padding: 30px 0;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .header-img,
+        .header-video {
+            width: 450px;
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .btn-primary,
+        .btn-outline-secondary,
+        .btn-danger {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            background-color: orange;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover,
+        .btn-outline-secondary:hover,
+        .btn-danger:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .btn-container {
+            margin-top: 15px;
+        }
+
+        /* Merge Sign-Up Input and Button */
+        #signup-container {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        #signup-container input {
+            padding: 8px;
+            font-size: 0.9rem;
+            flex-grow: 1;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #signup-container button {
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* Position Book Now and Play Now Buttons in Same Row */
+        #action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Scoreboard Styling */
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .stat-item i {
+            color: orange;
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+        }
+
+        .stat-item strong {
+            font-size: 1.5rem;
+            display: block;
+        }
+
+        .row-stats {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jumbo Car Motors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-products">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-services">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#buy">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-contacts">Our Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <header class="bg-white border-bottom">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div>
+                <h1>Welcome to Jumbo Car Motors</h1>
+                <p>At Jumbo Car Motors, we specialize in providing top-tier vehicles and exceptional automotive services. Our mission is to deliver quality, reliability, and innovation in every car we offer. Whether you’re looking for a fuel-efficient commuter, a family SUV, or a high-performance vehicle, our diverse range of models is designed to meet your needs.</p>
+                <div class="btn-container">
+                    <div id="signup-container">
+                        <input type="text" placeholder="Enter your email">
+                        <button class="btn btn-primary">Sign Up</button>
+                    </div>
+                    <div id="action-buttons">
+                        <button class="btn btn-outline-secondary">Book Now</button>
+                        <button class="btn btn-danger" id="play-video-btn">Play Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Image to be replaced with video -->
+            <div id="media-container">
+                <img src="https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_640.jpg"
+                    class="header-img" alt="Cover Image" id="cover-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Scoreboard with Counter Animation -->
+    <div class="container row-stats">
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 stat-item">
+                <i class="fas fa-smile-beam"></i>
+                <strong class="counter" data-target="90">0</strong>
+                Satisfaction
+            </div>
+            <div class="col-md-3 col-sm-6 stat-item">
+                <i class="fas fa-handshake"></i>
+                <strong class="counter" data-target="2000">0</strong>
+                Partners
+            </div>
+            <div class="col-md-3 col-sm-6 stat-item">
+                <i class="fas fa-users"></i>
+                <strong class="counter" data-target="5000">0</strong>
+                Customers
+            </div>
+            <div class="col-md-3 col-sm-6 stat-item">
+                <i class="fas fa-cogs"></i>
+                <strong class="counter" data-target="1000">0</strong>
+                Services
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for replacing image with video and counter animation -->
+    <script>
+        document.getElementById('play-video-btn').addEventListener('click', function () {
+            var mediaContainer = document.getElementById('media-container');
+    
+            // Replace the image with an iframe containing the video using the correct YouTube embed URL
+            mediaContainer.innerHTML = '<iframe id="youtube-video" class="header-video" src="https://www.youtube.com/embed/qSsfyv_Ovk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        });
+
+
+        // Counter animation for scoreboard
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Speed of the animation
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Calculate the increment
+                const increment = target / speed;
+
+                // If count is less than target, increment
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target; // Ensure the final value matches the target
+                }
+            };
+
+            updateCount();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    .stat-item {
+        font-family: 'Times New Roman', Times, serif;
+        align-items: right;
+        background-color: #f7f7f7;
+        color: rgb(5, 5, 5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-item strong {
+        display: block;
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .stat-item i {
+        color: orange; 
+    }
+
+    .stat-item:hover {
+        transform: scale(1.1); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    }
+</style>
+<style>
+    .
+</style>
+
+<div class="container services my-5"></div>
+    <h2 class="text-center mb-4">Our Best Services</h2>
+    <div class="row">
+        <div class="col-md-3 service-item text-center">
+            <h4 class="service-title"> VIP Pickups and Drop Offs</h4>
+            <img src="https://cdn.pixabay.com/photo/2016/04/01/12/16/car-1300629_640.png" 
+                 alt="Custom Software Development" class="img-fluid same-size-img">
+        </div>
+        <div class="col-md-3 service-item text-center">
+            <h4 class="service-title"> Serving</h4>
+            <img src="https://cdn.pixabay.com/photo/2016/08/05/17/20/car-1572686_640.jpg"
+                 alt="AI and Machine Learning" class="img-fluid same-size-img">
+        </div>
+        <div class="col-md-3 service-item text-center">
+            <h4 class="service-title"> Wheel Balancing</h4>
+            <img src="https://media.istockphoto.com/id/1831594898/photo/happy-mechanic-aligning-the-tire-of-a-car-at-an-auto-repair-shop.jpg?s=612x612&w=0&k=20&c=posMpXwMaVLYuVIZEV9SdZFDzEX88_EkWZjRZiC72pk=" 
+                 alt="Maintenance and Support" class="img-fluid same-size-img">
+        </div>
+        <div class="col-md-3 service-item text-center">
+            <h4 class="service-title">Web and Mobile App Development</h4>
+            <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_640.jpg" 
+                 alt="Web and Mobile App Development" class="img-fluid same-size-img">
+        </div>
+    </div>
+</div>
+
+<div class="container steps my-5"> 
+    <h2 class="text-center mb-4">Easy Steps And Get Your Solution</h2>
+    <div class="container services my-5">
+        <div class="row">
+            <div class="col-md-3 service-item text-center">
+                <h4 class="service-title">Consultation</h4>
+                <img src="https://plus.unsplash.com/premium_photo-1661420128622-4a5267435ce4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D" 
+                     alt="Consultation" class="img-fluid same-size-img">
+            </div>
+            <div class="col-md-3 service-item text-center">
+                <h4 class="service-title">Tailored Solution Proposal</h4>
+                <img src="https://plus.unsplash.com/premium_photo-1679517155620-8048e22078b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c29sdXRpb258ZW58MHx8MHx8fDA%3D" 
+                     alt="Solution Proposal" class="img-fluid same-size-img">
+            </div>
+            <div class="col-md-3 service-item text-center">
+                <h4 class="service-title">Development and Training</h4>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fElUJTIwdHJhaW5pbmd8ZW58MHx8MHx8fDA%3D" 
+                     alt="Development and Training" class="img-fluid same-size-img">
+            </div>
+            <div class="col-md-3 service-item text-center">
+                <h4 class="service-title">Delivery and Support</h4>
+                <img src="https://plus.unsplash.com/premium_photo-1661778490723-371305b4fb06?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJhaW5pbmd8ZW58MHx8MHx8fDA%3D" 
+                     alt="Delivery and Support" class="img-fluid same-size-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-title {
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(4, 4, 5);
+        width: 100%;
+        
+
+    }
+
+    .same-size-img {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover; 
+        transition: transform 0.3s ease, filter 0.3s ease; 
+    }
+
+    
+    .same-size-img:hover {
+        transform: scale(1.05); 
+        filter: brightness(70%); 
+    }
+</style>
+
+ <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+        }
+        .product-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .product-title {
+            font-size: 16px;
+            color: rgb(0, 0, 14);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5"> 
+        <h2 class="text-center mb-4">Our Products</h2>
+        <div class="row">
+            <div class="col-md-4 product-item">
+                <img src="https://media.istockphoto.com/id/1475186110/photo/document-management-system-and-it-business-processes-arranging-for-archiving-find-and-manage.jpg?s=612x612&w=0&k=20&c=GtRqVXNXASwEkXiiytRrF-WTsalysigPolHIyhghDmg=" alt="Product 1">
+                <div class="product-title">Cyber Security Tools</div>
+            </div>
+            <div class="col-md-4 product-item">
+                <img src="https://media.istockphoto.com/id/1733516378/photo/online-survey-filling-out-and-digital-form-checklist-quality-check-improvement.jpg?s=612x612&w=0&k=20&c=EuN2fOiYqKeTC4qPPl7VerrEVe6dE4vahgSRefq-q_c=" alt="Product 2">
+                <div class="product-title">Mobile Apps</div>
+            </div>
+            <div class="col-md-4 product-item">
+                <img src="https://media.istockphoto.com/id/1438337441/photo/business-management-concept-development-and-management-executives-looking-virtual-screens.jpg?s=612x612&w=0&k=20&c=F2-E8sUkjY8p5y_FfHRSYcLfrt9zdjdEjzWyCoy4p1c=" alt="Product 3">
+                <div class="product-title">API Integration</div>
+            </div>
+            <style>
+                body {
+                    font-family: 'Times New Roman', Times, serif;
+                    color: blue;
+                }
+                .testimonial-item {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .testimonial-item img {
+                    width: 100%;
+                    height: 600px; 
+                    object-fit: cover; 
+                    margin-bottom: 10px;
+                }
+                .product-title {
+                    font-size: 16px;
+                    color: rgb(17, 17, 26);
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container testimonials my-5">
+                <h2 class="text-center mb-4">What People Say About Us</h2>
+                <div class="row">
+                    <div class="col-md-6 testimonial-item">
+                        <img src="https://cdn.pixabay.com/photo/2024/02/15/13/52/students-8575444_640.png" alt="Testimonial 1">
+                        <div class="product-title"> Sarah Perez CEO Health SYNC. <p>TechGenius is the best provider for all AI Driven manangement solutions. They delivered a management system that has streamlined our operations.</p> </div>
+                    </div>
+                    <div class="col-md-6 testimonial-item">
+                        <img src="https://cdn.pixabay.com/photo/2024/08/03/20/18/ai-generated-8943009_960_720.jpg" alt="Testimonial 2">
+                        <div class="product-title"> John Matthews CEO innovative X <P> TechGenius transformed our outdated systems into sleek, effecient software. The new software has increased our earnings by 40% within the first quater of the year. We highly recommend their services. </P></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                color: blue;
+            }
+            .cta p {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .cta .btn {
+                background-color: orange;
+                border: none;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+            .cta .btn:hover {
+                background-color: blue;
+                transform: scale(1.05); 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container cta text-center my-5"> 
+            <p>Want to Register Easily?</p>
+            <button class="btn btn-success">Submit Here</button>
+        </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+<footer class="bg-white border-top">
+    <div class="container py-4">
+        <p>&copy; 2024 TechGenius Solutions - All Rights Reserved</p>
+        <p>Follow us on social media</p>
+    </div>
+</footer>
+</html>
